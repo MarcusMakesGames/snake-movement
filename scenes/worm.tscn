@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcq6amyt56gc6"]
+
+[ext_resource type="Script" path="res://scripts/worm.gd" id="1_2kg6v"]
+[ext_resource type="Texture2D" uid="uid://dux103xya276" path="res://icon.svg" id="2_arqd2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f188n"]
+radius = 16.0
+
+[node name="Worm" type="Area2D"]
+script = ExtResource("1_2kg6v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_arqd2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_f188n")

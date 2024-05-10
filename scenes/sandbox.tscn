@@ -1,0 +1,146 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3yalup2nkylw"]
+
+[ext_resource type="PackedScene" uid="uid://bcq6amyt56gc6" path="res://scenes/worm.tscn" id="1_h6g2h"]
+[ext_resource type="PackedScene" uid="uid://cqwkqa74108vn" path="res://scenes/body_segment.tscn" id="2_4gxkn"]
+
+[sub_resource type="Gradient" id="Gradient_so5j3"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_70gad"]
+gradient = SubResource("Gradient_so5j3")
+width = 20
+height = 20
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_houw7"]
+
+[node name="Sandbox" type="Node2D"]
+
+[node name="Worm" parent="." instance=ExtResource("1_h6g2h")]
+position = Vector2(580, 376)
+collision_layer = 2
+collision_mask = 4
+body_segment_scene = ExtResource("2_4gxkn")
+
+[node name="Collectables" type="Node2D" parent="."]
+
+[node name="Collectable" type="Area2D" parent="Collectables"]
+z_index = -10
+position = Vector2(233, 236)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Collectables/Collectable"]
+modulate = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_70gad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectables/Collectable"]
+shape = SubResource("CircleShape2D_houw7")
+
+[node name="Collectable2" type="Area2D" parent="Collectables"]
+z_index = -10
+position = Vector2(917, 88)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Collectables/Collectable2"]
+modulate = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_70gad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectables/Collectable2"]
+shape = SubResource("CircleShape2D_houw7")
+
+[node name="Collectable3" type="Area2D" parent="Collectables"]
+z_index = -10
+position = Vector2(920, 518)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Collectables/Collectable3"]
+modulate = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_70gad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectables/Collectable3"]
+shape = SubResource("CircleShape2D_houw7")
+
+[node name="Collectable4" type="Area2D" parent="Collectables"]
+z_index = -10
+position = Vector2(314, 515)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Collectables/Collectable4"]
+modulate = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_70gad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectables/Collectable4"]
+shape = SubResource("CircleShape2D_houw7")
+
+[node name="Collectable5" type="Area2D" parent="Collectables"]
+z_index = -10
+position = Vector2(107, 391)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Collectables/Collectable5"]
+modulate = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_70gad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectables/Collectable5"]
+shape = SubResource("CircleShape2D_houw7")
+
+[node name="Collectable6" type="Area2D" parent="Collectables"]
+z_index = -10
+position = Vector2(1039, 225)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Collectables/Collectable6"]
+modulate = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_70gad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectables/Collectable6"]
+shape = SubResource("CircleShape2D_houw7")
+
+[node name="Collectable7" type="Area2D" parent="Collectables"]
+z_index = -10
+position = Vector2(835, 351)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Collectables/Collectable7"]
+modulate = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_70gad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectables/Collectable7"]
+shape = SubResource("CircleShape2D_houw7")
+
+[node name="Collectable8" type="Area2D" parent="Collectables"]
+z_index = -10
+position = Vector2(583, 118)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Collectables/Collectable8"]
+modulate = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_70gad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectables/Collectable8"]
+shape = SubResource("CircleShape2D_houw7")
+
+[node name="Collectable9" type="Area2D" parent="Collectables"]
+z_index = -10
+position = Vector2(557, 551)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Collectables/Collectable9"]
+modulate = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_70gad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectables/Collectable9"]
+shape = SubResource("CircleShape2D_houw7")
+
+[connection signal="area_entered" from="Worm" to="Worm" method="_on_area_entered"]
